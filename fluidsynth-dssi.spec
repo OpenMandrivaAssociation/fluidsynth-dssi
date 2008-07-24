@@ -1,6 +1,6 @@
 %define name	fluidsynth-dssi
 %define version	0.9.1
-%define release %mkrel 2
+%define release %mkrel 4
 
 Name: 	 	%{name}
 Summary: 	DSSI plugin wrapper for the FluidSynth software synthesizer
