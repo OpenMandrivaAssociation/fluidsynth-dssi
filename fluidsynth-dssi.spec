@@ -1,15 +1,15 @@
 %define name	fluidsynth-dssi
-%define version	0.9.1
-%define release %mkrel 4
+%define version	1.0.0
+%define release %mkrel 1 
 
 Name: 	 	%{name}
 Summary: 	DSSI plugin wrapper for the FluidSynth software synthesizer
 Version: 	%{version}
 Release: 	%{release}
 
-Source:		http://prdownloads.sourceforge.net/dssi/%{name}-%{version}.tar.bz2
+Source:		http://prdownloads.sourceforge.net/dssi/%{name}-%{version}.tar.gz
 URL:		http://dssi.sourceforge.net
-License:	GPL
+License:	GPLv2+
 Group:		Sound
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	dssi-devel
