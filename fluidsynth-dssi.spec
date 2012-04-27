@@ -1,22 +1,18 @@
-%define name	fluidsynth-dssi
-%define version	1.0.0
-%define release %mkrel 1 
+Name:       fluidsynth-dssi
+Summary:    DSSI plugin wrapper for the FluidSynth software synthesizer
+Version:    1.0.0
+Release:    2
 
-Name: 	 	%{name}
-Summary: 	DSSI plugin wrapper for the FluidSynth software synthesizer
-Version: 	%{version}
-Release: 	%{release}
+Source:     http://prdownloads.sourceforge.net/dssi/%{name}-%{version}.tar.gz
+URL:        http://dssi.sourceforge.net
+License:    GPLv2+
+Group:      Sound
 
-Source:		http://prdownloads.sourceforge.net/dssi/%{name}-%{version}.tar.gz
-URL:		http://dssi.sourceforge.net
-License:	GPLv2+
-Group:		Sound
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
-BuildRequires:	dssi-devel
-BuildRequires:	liblo-devel
-BuildRequires:	libalsa-devel
-BuildRequires:	fluidsynth-devel
-BuildRequires:	gtk2-devel
+BuildRequires:  pkgconfig(dssi)
+BuildRequires:  pkgconfig(liblo)
+BuildRequires:  pkgconfig(alsa)
+BuildRequires:  pkgconfig(gtk+-2.0)
+BuildRequires:  pkgconfig(fluidsynth)
 
 %description
 The FluidSynth-DSSI package contains FluidSynth-DSSI, a wrapper for the
@@ -30,18 +26,14 @@ as a DSSI plugin.
 alias libtoolize=true
 %configure2_5x
 %make
-										
+
 %install
 rm -rf $RPM_BUILD_ROOT
 %makeinstall
-
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
 %doc ChangeLog COPYING README TODO
 %{_libdir}/dssi/%{name}/FluidSynth-DSSI_gtk
-%{_libdir}/dssi/%{name}.la
 %{_libdir}/dssi/%{name}.so
-	       
+
