@@ -37,3 +37,34 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/dssi/%{name}/FluidSynth-DSSI_gtk
 %{_libdir}/dssi/%{name}.so
 
+
+
+%changelog
+* Fri Apr 27 2012 Frank Kober <emuse@mandriva.org> 1.0.0-2
++ Revision: 793830
+- rebuild, spec cleanup
+
+* Fri Dec 04 2009 Jérôme Brenier <incubusss@mandriva.org> 1.0.0-1mdv2011.0
++ Revision: 473245
+- new version 1.0.0
+- fix license tag
+
+* Thu Jul 24 2008 Thierry Vignaud <tv@mandriva.org> 0.9.1-4mdv2009.0
++ Revision: 245216
+- rebuild
+
+* Wed Jan 02 2008 Olivier Blin <blino@mandriva.org> 0.9.1-2mdv2008.1
++ Revision: 140730
+- restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+    - import fluidsynth-dssi
+
+
+* Mon Apr  3 2006 Austin Acton <austin@mandriva.org> 0.9.1-2mdk
+- fix description
+
+* Sat Apr  1 2006 Austin Acton <austin@mandriva.org> 0.9.1-1mdk
+- adapt spec from Pedro Lopez-Cabanillas <plcl@users.sourceforge.net>
+- initial package
