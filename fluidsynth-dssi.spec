@@ -1,7 +1,7 @@
 Name:       fluidsynth-dssi
 Summary:    DSSI plugin wrapper for the FluidSynth software synthesizer
 Version:    1.0.0
-Release:    2
+Release:    3
 
 Source:     http://prdownloads.sourceforge.net/dssi/%{name}-%{version}.tar.gz
 URL:        http://dssi.sourceforge.net
